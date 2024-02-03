@@ -79,7 +79,7 @@
       .nodePadding(10)  /* Thickness lines */
       .size([width, height]);
 
-    /* BRING DATA IN RIGHT FORMAT */
+    /* BRING DATA IN RIGHT FORMAT https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv?token=GHSAT0AAAAAACM5NKPNCBNWTT7LFNZK6J4IZN6W3MA */
     d3.csv("TestFormatVis2.csv").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 

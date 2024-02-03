@@ -80,7 +80,7 @@
       .size([width, height]);
 
     /* BRING DATA IN RIGHT FORMAT */
-    d3.csv("TestFormatVis2.csv").then(function (data) {
+    d3.csv("https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv?token=GHSAT0AAAAAACM5NKPNCBNWTT7LFNZK6J4IZN6W3MA").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 
       data.forEach(function (d) {
