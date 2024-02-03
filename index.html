@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SANKEY Experiment</title>
+  <link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f0f0; /* Set your desired background color */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333; /* Set your desired title color */
+      font-family: 'Tw Cen MT Std', sans-serif;
+      margin-top: 20px;
+    }
+
+    svg {
+      margin-top: 20px;
+    }
+
+    .node rect {
+      fill-opacity: .7;
+      shape-rendering: crispEdges;
+      cursor: move; /* Add cursor style for draggable elements */
+    }
+
+    .node text {
+      pointer-events: none;
+      font-family: 'Tw Cen MT Std', sans-serif;
+      font-weight: 400; /* 400 */
+    }
+
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-opacity: .125;
+    }
+
+    .link:hover {
+      stroke-opacity: .5;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Activities</h1>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <script>
+    var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+      width = 1000 - margin.left - margin.right,
+      height = 3000 - margin.top - margin.bottom;
+
+    var formatNumber = d3.format(",.0f"),
+      format = function (d) { return formatNumber(d); },
+      color = d3.scaleOrdinal().range(d3.schemePastel2);
+
+    const colorScale = d3.scaleOrdinal().range(d3.schemePastel1);
+
+    var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+    var sankey = d3.sankey()
+      .nodeWidth(20)
+      .nodePadding(10)  /* Thickness lines */
+      .size([width, height]);
+
+    /* BRING DATA IN RIGHT FORMAT */
+    d3.csv("TestFormatVis2.csv").then(function (data) {
+      var sankeydata = { "nodes": [], "links": [] };
+
+      data.forEach(function (d) {
+        sankeydata.nodes.push({ "name": d.source, "level_source": +d.level_source,"level_target": +d.level_target });
+        sankeydata.nodes.push({ "name": d.target, "level_source": +d.level_source,"level_target": +d.level_target });
+        sankeydata.links.push({ "source": d.source, "target": d.target, "value": +d.value, "level_source": +d.level_source,"level_target": +d.level_target});
+      });
+      
+      sankeydata.nodes = Array.from( /* deduplicate node names */
+        d3.group(sankeydata.nodes, d => d.name),
+        ([value]) => (value)
+      );
+
+      sankeydata.links.forEach(function (d, i) {
+        sankeydata.links[i].source = sankeydata.nodes.indexOf(sankeydata.links[i].source);
+        sankeydata.links[i].target = sankeydata.nodes.indexOf(sankeydata.links[i].target);
+      });
+
+      sankeydata.nodes.forEach(function (d, i) {
+        sankeydata.nodes[i] = { "name": d, "level_source": +d.level_source,"level_target": +d.level_target };
+      });
+      
+
+      /* SANKEY */
+      var graph = sankey(sankeydata);
+      
+      var node = svg.append("g").selectAll(".node")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("class", "node")
+          
+      node.append("rect") // 
+                .attr("x", function (d) {
+        if (d.sourceLinks.length > 0 && d.targetLinks.length == 0 ) {
+        d.x0 = 0
+        } else if (d.targetLinks[0].level_target == 3 ){
+        d.x0 = width - 3*(width/4)
+        } else if (d.targetLinks[0].level_target == 2 ){
+        d.x0 = width - 1.9*(width/4)
+        } else if (d.targetLinks[0].level_target == 1 ){
+        d.x0 = width - 0.25*width
+        }
+        return d.x0;
+        })
+        .attr("y", function (d) { return d.y0; })
+        .attr("height", function (d) { return d.y1 - d.y0; })
+        .attr("width", sankey.nodeWidth())
+        .style("fill", function (d) {
+            // Check if the node is a source or target
+                if (d.sourceLinks.length > 0 && d.targetLinks.length == 0 ) {
+                    // Node is a source, assign a unique color based on its name
+                    const colorIndex = color(d.name.replace(/ .*/, ""));
+                    d.color = d3.rgb(colorIndex).darker(1);
+                } else  {
+                    // Node is a target, use a lighter version of the target color
+                    const firstTargetColor = d.targetLinks[0].source.color || colorScale(0) ;
+                    d.color = d3.rgb(firstTargetColor).brighter(0.5);
+                }
+            return d.color;
+        })
+        .style("stroke", function (d) { return d3.rgb(d.color).darker(0); })
+        .append("title")
+        .text(function (d) { return d.name + "\n" + format(d.value); });
+
+      node.append("text")
+      .attr("x", function (d) {
+        if (d.sourceLinks.length > 0 && d.targetLinks.length == 0) {
+          d.x0 = 0;
+        } else if (d.targetLinks[0].level_target == 3) {
+          d.x0 = width - 3 * (width / 4);
+        } else if (d.targetLinks[0].level_target == 2) {
+          d.x0 = width - 1.9 * (width / 4);
+        } else if (d.targetLinks[0].level_target == 1) {
+          d.x0 = width - 0.25 * width;
+        }
+        return d.x0 + 20;
+      })
+      .attr("y", function (d) { return (d.y1 + d.y0) / 2; })
+      .attr("dy", "0.35em")
+      .text(function (d) { return d.name; });
+      
+
+     var link = svg.append("g").selectAll(".link")
+        .data(graph.links)
+        .enter().append("path")
+        .attr("class", "link")
+        .attr("stroke-width", function (d) { return d.width; })
+        .attr("x", function (d) {console.log(d) 
+         if (d.level_target == 4) {
+           console.log("yes 4")
+           return d.target.x1 = 0;
+        } else if (d.level_target == 3) {
+            console.log("yes 3")
+            return d.target.x1 = width - 3 * (width / 4) + sankey.nodeWidth();
+          } else if (d.level_target == 2) {
+            console.log("yes 2")
+            return d.target.x1 = width - 1.9 * (width / 4) + sankey.nodeWidth();
+          } else if (d.level_target == 1) {
+            console.log("yes 1")
+            return d.target.x1 = width - 0.25 * width + sankey.nodeWidth();
+          }
+        })
+        .attr("x", function (d) {
+          if (d.level_source == 4) {
+           return d.source.x0 = 0;
+         } else  if (d.level_source == 3) {
+            return d.source.x0 = width - 3 * (width / 4);
+          } else if (d.level_source == 2) {
+            return d.source.x0 = width - 1.9 * (width / 4);
+          } else if (d.target.level_source == 1) {
+            return d.source.x0 = width - 0.25 * width;
+          }
+        })
+        .attr("d", d3.sankeyLinkHorizontal());
+
+        
+      link.append("title")
+        .text(function (d) {
+          return d.source.name + " → " + d.target.name + "\n" + format(d.value);
+        });
+
+
+        
+      /* INTERACTIVE PART */
+      /* Dragging */
+    
+
+      /* Clicking */
+      node.on("click", function (event, d) {
+        var connectedNodes = [];
+        var connectedLinks = [];
+
+        graph.links.forEach(function (link) {
+          if (link.source === d || link.target === d) {
+            connectedNodes.push(link.source, link.target);
+            connectedLinks.push(link);
+          }
+        });
+
+        node.classed("hidden", function (n) {
+          return !connectedNodes.includes(n);
+        });
+
+        link.classed("hidden", function (l) {
+          return !connectedLinks.includes(l);
+        });
+      
+         function handleMouseClick(event) {
+          clicked = 1;
+          
+          var clickedElement = event.srcElement || event.target;
+          
+          if (clickedElement.nodeName.toLowerCase() == "rect") {
+            clicked = 0;
+          }
+
+          if (clicked == 1) {
+            node.classed("hidden", false);
+            link.classed("hidden", false);
+          }
+        };
+        
+        // Add a click event listener to the document
+        document.addEventListener("click", handleMouseClick);
+
+
+      });
+    });
+
+
+  </script>
+
+</body>

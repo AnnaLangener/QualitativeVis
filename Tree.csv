@@ -1,0 +1,169 @@
+Category,Level 3,Level 2,Level 1,Cluster
+Food,cooking/ preparing a meal,-,making/ having a tea/ coffee,1
+Food,-,-,baking,1
+Food,-,-,ordering food,2
+Food,-,-,going out for fast food restaurant,3
+Food,-,-,going to a restaurant,3
+Food,-,-,going to a cafe,3
+Food,-,-,snacking,4
+Food,-,-,eating a meal,4
+personal grooming,getting ready,-,showering,5
+personal grooming,getting ready,-,washing/ drying hair,5
+personal grooming,getting ready,-,putting on/ changing clothes,5
+personal grooming,getting ready for bed,-,showering,5
+personal grooming,getting ready for bed,-,washing/ drying hair,5
+personal grooming,getting ready for bed,-,putting on/ changing clothes,5
+personal grooming,getting ready,-,brushed my teeth,5
+personal grooming,getting ready,-,washed my face,5
+personal grooming,getting ready for bed,-,brushed my teeth,5
+personal grooming,getting ready for bed,-,washed my face,5
+personal grooming,getting ready,-,putting on a face mask,6
+personal grooming,getting ready,-,doing make up,6
+personal grooming,getting ready,-,painting nails,6
+personal grooming,getting ready,-,dying hair,6
+personal grooming,-,-,getting a piercing,7
+personal grooming,-,-,getting a massage,7
+personal grooming,-,-,going to hairdresser,7
+personal grooming,-,-,going to beauty salon,7
+personal grooming,-,-,going to nail salon,7
+City,going to the city,-,going to the theatre,8
+City,going to the city,-,goingt to the forum,8
+City,going to the city,-,watching movie in the cinema,8
+Nature,going outside,-,being at a lake,9
+Nature,going outside,-,going to the ocean,9
+Nature,going outside,-,being at a park,9
+Nature,going outside,-,visting a botanical garden,9
+Nature,going outside,-,being in a forest,9
+University,being at university/ faculty/library,having a uni-related meeting,taking an exam,10
+University,being at university/ faculty/library,having a uni-related meeting,attending a lecture,10
+University,being at university/ faculty/library,having a uni-related meeting,attending a practical,10
+University,being at university/ faculty/library,student association/ committee meeting,-,-
+University,-,-,working on a university assigment,11
+University,-,-,receiving test results/ grades,11
+University,-,studying,,
+Other,-,-,having a driving lesson,12
+Work,charity work/ Volunteering,,,
+Work,going to/ being at work/ the office,work-related meeting,assisting in an operation/ surgery,13
+Work,going to/ being at work/ the office,work-related meeting,patient consultation,13
+Work,-,-,participating in research,14
+Work,-,-,babysitting,14
+Work,-,-,teaching language classes,14
+Work,-,-,tutoring,14
+Work,-,-,giving riding lessons,14
+Work,-,-,teaching a sports class,14
+Work,-,work-related meeting,had my job interview,101
+Sporting,-,-,teaching a sports class,14
+Religion,religious activities,-,going to church,15
+Travel,traveling,city trip/ vacation,-,-
+Travel,traveling,sightseeing,-,-
+Transport,traveling,-,taking a flight,16
+Transport,traveling,-,taking/ waiting for public transportation,16
+Transport,traveling,-,walking,16
+Transport,traveling,-,biking/ cycling,16
+Transport,traveling,-,traveling by car,16
+Transport,traveling,-,going home,17
+Resting,-,-,taking a nap,18
+Resting,-,-,taking a break,18
+Resting,-,-,relaxing/ chilling/ resting,18
+Other,-,-,procrastinating,103
+Resting,-,-,laying/ sitting somewhere,18
+Resting,-,-,nothing,18
+Other,-,-,meditating,19
+Other,-,-,thinking,103
+Sporting,going to the gym,-,-,
+Sporting,doing a workout,-,yoga,20
+Sporting,doing a workout,-,pilates,20
+Sporting,doing a workout,-,stretching,20
+Sporting,doing a workout,-,archery,21
+Sporting,doing a workout,-,playing basketball,21
+Sporting,doing a workout,-,playing football,21
+Sporting,doing a workout,-,playing table tennis,21
+Sporting,doing a workout,-,playing tennis,21
+Sporting,doing a workout,-,dancing,22
+Sporting,doing a workout,-,swimming,22
+Sporting,doing a workout,-,going for a run,22
+Sporting,doing a workout,-,inline skating,22
+Sporting,doing a workout,-,kickboxing,100
+Sporting,doing a workout,-,MMA,100
+Sporting,doing a workout,-,ice skating,22
+Hobby,-,playing games,sudoku,23
+Hobby,-,playing games,jigsaw puzzles,23
+Hobby,-,playing videogames,-,
+Hobby,-,playing games,playing pool,102
+Hobby,-,playing games,lasergaming,102
+Hobby,-,pet activities,-,
+Hobby,-,-,watering plant,24
+Hobby,-,-,repotting plant,24
+Hobby,working on a creative task,singing,-,-
+Hobby,working on a creative task,playing an instrument,-,-
+Hobby,working on a creative task,acting / practicing (theatre / comedy),-,-
+Hobby,working on a creative task,photo/ video shooting,-,-
+Hobby,working on a creative task,,-,-
+Hobby,working on a creative task,-,looking at old picture/ photos/videos,25
+Hobby,working on a creative task,-,crafting a photo wall,25
+Hobby,working on a creative task,-,assembling a miniature,25
+Hobby,working on a creative task,-,painting,26
+Hobby,working on a creative task,-,drawing,26
+Hobby,working on a creative task,-,making a bracelet,27
+Hobby,working on a creative task,-,crochet,27
+Hobby,working on a creative task,-,knitting,27
+Hobby,working on a creative task,-,reading,28
+Hobby,working on a creative task,-,writing poem for Sinterklaas,28
+Hobby,working on a creative task,journalling,-,-
+Chores,small errands,-,picking up/ bringing away mail,31
+Chores,planning/ organising,-,-,-
+Chores,-,-,handywork/ renovation,29
+Chores,-,-,tidying up,30
+Chores,-,-,cleaning,30
+Chores,-,-,doing groceries,30
+Chores,-,-,doing laundry,30
+Chores,-,-,packing/ unpacking suitcase,32
+Health,doctor's appointment,-,therapy session,33
+Health,doctor's appointment,-,physiotherapy,33
+Health,doctor's appointment,-,going to the pharmacy,33
+Health,doctor's appointment,-,going to the hospital,33
+Health,doctor's appointment,-,dentist appointment,33
+Health,not feeling well,-,crying,34
+Health,not feeling well,being sick/injured,having a headache,35
+Health,not feeling well,being sick/injured,taking a covid test,35
+Health,not feeling well,being sick/injured,being hungover,35
+Social,hanging out/ being/ meeting with someone,-,talking,36
+Social,hanging out/ being/ meeting with someone,-,having a fight,36
+Social,hanging out/ being/ meeting with someone,-,being intimate/ cuddling,36
+Social,hanging out/ being/ meeting with someone,-,fooling around,36
+Social,-,helping/ supporting someone,picking someone up/ bringing someone away,37
+Social,visiting family/ friends overnight,-,-,-
+Substance use,-,-,smoking (not specified),38
+Substance use,-,-,smoking weed/ taking drugs,38
+Substance use,-,-,having an (alcoholic) drink/ having a borrel,38
+Party,-,-,playing drinking games,39
+Party,-,going out/partying,-,-
+Party,-,going to a concert,-,-
+Party,-,going to a festival,-,-
+Party,preparing for a holiday/ event (celebration),-,christmas celebration,40
+Party,preparing for a holiday/ event (celebration),-,other holiday celebration,40
+Party,preparing for a holiday/ event (celebration),-,birthday celebration,40
+Buying,going shopping,-,going to a hardware store,41
+Buying,going shopping,-,going to a bookstore,41
+Buying,going shopping,buying gifts,-,-
+Buying,online shopping,buying gifts,-,-
+Buying,going shopping,-,shopping clothing,42
+Buying,going shopping,-,buying jewellery,42
+Buying,going shopping,-,shopping home goods/ furniture,42
+Buying,online shopping,-,shopping clothing,42
+Buying,online shopping,-,buying jewlery,42
+Buying,online shopping,-,shopping home goods/ furniture,42
+Digital,-,-,listening to music/ radio,43
+Digital,-,-,listening to a podcast,43
+Digital,-,-,watching sport (tv),43
+Digital,-,-,watching videos/ TV shows/ Movies,43
+Digital,-,-,watching/ reading news,43
+Digital,browsing on the laptop,social media use,-,-
+Digital,browsing on the phone,social media use,-,-
+Digital,browsing on the laptop,-,texting/ chatting/checking messages,44
+Digital,browsing on the laptop,-,emailing,44
+Digital,browsing on the laptop,-,(video) calling,44
+Digital,browsing on the phone,-,texting/ chatting/checking messages,44
+Digital,browsing on the phone,-,emailing,44
+Digital,browsing on the phone,-,(video) calling,44
+Other,-,-,had a house viewing,45

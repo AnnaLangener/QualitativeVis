@@ -1,0 +1,31 @@
+﻿source,target,value
+Food,cooking/ preparing a meal,10
+cooking/ preparing a meal,making/ having a tea/ coffee,1
+Food,baking,1
+Food,ordering food,1
+Food,going out for fast food restaurant,1
+Food,going to a restaurant,1
+Food,going to a cafe,1
+Food,snacking,1
+Food,eating a meal,1
+personal grooming,getting ready,1
+getting ready,showering,1
+getting ready,washing/ drying hair,1
+getting ready,putting on/ changing clothes,1
+getting ready,brushed my teeth,1
+getting ready,washed my face,1
+getting ready,putting on a face mask,1
+getting ready,doing make up,1
+getting ready,painting nails,1
+getting ready,dying hair,1
+personal grooming,getting ready for bed,1
+getting ready for bed,showering,1
+getting ready for bed,washing/ drying hair,1
+getting ready for bed,putting on/ changing clothes,1
+getting ready for bed,brushed my teeth,1
+getting ready for bed,washed my face,1
+personal grooming,getting a piercing,1
+personal grooming,getting a massage,1
+personal grooming,going to hairdresser,1
+personal grooming,going to beauty salon,1
+personal grooming,going to nail salon,1

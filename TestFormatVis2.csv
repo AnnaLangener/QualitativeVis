@@ -1,0 +1,193 @@
+﻿source,target,value,cluster,level_source,level_target
+Food,cooking/ preparing a meal,1,,4,3
+cooking/ preparing a meal,making/ having a tea/ coffee,1,1,3,1
+Food,baking,1,1,4,1
+Food,ordering food,1,2,4,1
+Food,going out for fast food restaurant,1,3,4,1
+Food,going to a restaurant,1,3,4,1
+Food,going to a cafe,1,3,4,1
+Food,snacking,1,4,4,1
+Food,eating a meal,1,4,4,1
+personal grooming,getting ready,1,,4,3
+getting ready,showering,1,5,3,1
+getting ready,washing/ drying hair,1,5,3,1
+getting ready,putting on/ changing clothes,1,5,3,1
+getting ready,brushed my teeth,1,5,3,1
+getting ready,washed my face,1,5,3,1
+getting ready,putting on a face mask,1,6,3,1
+getting ready,doing make up,1,6,3,1
+getting ready,painting nails,1,6,3,1
+getting ready,dying hair,1,6,3,1
+personal grooming,getting ready for bed,1,,4,3
+getting ready for bed,showering,1,5,3,1
+getting ready for bed,washing/ drying hair,1,5,3,1
+getting ready for bed,putting on/ changing clothes,1,5,3,1
+getting ready for bed,brushed my teeth,1,5,3,1
+getting ready for bed,washed my face,1,5,3,1
+personal grooming,getting a piercing,1,7,4,1
+personal grooming,getting a massage,1,7,4,1
+personal grooming,going to hairdresser,1,7,4,1
+personal grooming,going to beauty salon,1,7,4,1
+personal grooming,going to nail salon,1,7,4,1
+Resting,taking a nap,1,,4,1
+Resting,taking a break,1,,4,1
+Resting,relaxing/ chilling/ resting,1,,4,1
+Resting,laying/ sitting somewhere,1,,4,1
+Resting,nothing,1,,4,1
+City,going to the city,1,,4,3
+going to the city,going to the theatre,1,,3,1
+going to the city,goingt to the forum,1,,3,1
+going to the city,watching movie in the cinema,1,,3,1
+Nature,going outside,1,,4,3
+going outside,being at a lake,1,,3,1
+going outside,going to the ocean,1,,3,1
+going outside,being at a park,1,,3,1
+going outside,visting a botanical garden,1,,3,1
+going outside,being in a forest,1,,3,1
+University,studying,1,,4,2
+University,being at university/ faculty/library,1,,4,3
+being at university/ faculty/library,having a uni-related meeting,1,,3,2
+having a uni-related meeting,taking an exam,1,,2,1
+having a uni-related meeting,attending a lecture,1,,2,1
+having a uni-related meeting,attending a practical,1,,2,1
+being at university/ faculty/library,student association/ committee meeting,1,,3,2
+University,working on a university assigment,1,,4,1
+University,receiving test results/ grades,1,,4,1
+Work,going to/ being at work/ the office,1,,4,3
+going to/ being at work/ the office,work-related meeting,1,,3,2
+Work,work-related meeting,1,,4,2
+work-related meeting,assisting in an operation/ surgery,1,,2,1
+work-related meeting,patient consultation,1,,2,1
+work-related meeting,had my job interview,1,,2,1
+Work,participating in research,1,,4,1
+Work,babysitting,1,,4,1
+Work,teaching language classes,1,,4,1
+Work,charity work/ Volunteering,1,,4,3
+Work,tutoring,1,,4,1
+Work,giving riding lessons,1,,4,1
+Work,teaching a sports class,1,,4,1
+Sporting,going to the gym,1,,4,3
+Sporting,doing a workout,1,,4,3
+doing a workout,yoga,1,,3,1
+doing a workout,pilates,1,,3,1
+doing a workout,stretching,1,,3,1
+doing a workout,archery,1,,3,1
+doing a workout,playing basketball,1,,3,1
+doing a workout,playing football,1,,3,1
+doing a workout,playing table tennis,1,,3,1
+doing a workout,playing tennis,1,,3,1
+doing a workout,dancing,1,,3,1
+doing a workout,swimming,1,,3,1
+doing a workout,going for a run,1,,3,1
+doing a workout,inline skating,1,,3,1
+doing a workout,kickboxing,1,,3,1
+doing a workout,MMA,1,,3,1
+doing a workout,ice skating,1,,3,1
+Sporting,teaching a sports class,1,,4,1
+Hobby,playing games,1,,4,2
+playing games,sudoku,1,,2,1
+playing games,jigsaw puzzles,1,,2,1
+playing games,playing pool,1,,2,1
+playing games,lasergaming,1,,2,1
+Hobby,playing videogames,1,,4,2
+Hobby,pet activities,1,,4,2
+Hobby,watering plant,1,,4,1
+Hobby,repotting plant,1,,4,1
+Hobby,working on a creative task,1,,4,3
+working on a creative task,singing,1,,3,2
+working on a creative task,playing an instrument,1,,3,2
+working on a creative task,acting / practicing (theatre / comedy),1,,3,2
+working on a creative task,photo/ video shooting,1,,3,2
+working on a creative task,looking at old picture/ photos/videos,1,,3,1
+working on a creative task,crafting a photo wall,1,,3,1
+working on a creative task,assembling a miniature,1,,3,1
+working on a creative task,painting,1,,3,1
+working on a creative task,drawing,1,,3,1
+working on a creative task,making a bracelet,1,,3,1
+working on a creative task,crochet,1,,3,1
+working on a creative task,knitting,1,,3,1
+working on a creative task,reading,1,,3,1
+working on a creative task,writing poem for Sinterklaas,1,,3,1
+working on a creative task,journalling,1,,3,2
+Chores,small errands,1,,4,3
+small errands,picking up/ bringing away mail,1,,3,2
+Chores,planning/ organising,1,,4,3
+Chores,handywork/ renovation,1,,4,1
+Chores,tidying up,1,,4,1
+Chores,cleaning,1,,4,1
+Chores,doing groceries,1,,4,1
+Chores,doing laundry,1,,4,1
+Chores,packing/ unpacking suitcase,1,,4,1
+Health,doctor's appointment,1,,4,3
+doctor's appointment,therapy session,1,,3,1
+doctor's appointment,physiotherapy,1,,3,1
+doctor's appointment,going to the pharmacy,1,,3,1
+doctor's appointment,going to the hospital,1,,3,1
+doctor's appointment,dentist appointment,1,,3,1
+Health,not feeling well,1,,4,3
+not feeling well,crying,1,,3,1
+not feeling well,being sick/injured,1,,3,2
+being sick/injured,having a headache,1,,3,1
+being sick/injured,taking a covid test,1,,3,1
+being sick/injured,being hungover,1,,3,1
+Social,hanging out/ being/ meeting with someone,1,,4,3
+hanging out/ being/ meeting with someone,talking,1,,3,1
+hanging out/ being/ meeting with someone,having a fight,1,,3,1
+hanging out/ being/ meeting with someone,being intimate/ cuddling,1,,3,1
+hanging out/ being/ meeting with someone,fooling around,1,,3,1
+Social,helping/ supporting someone,1,,4,2
+helping/ supporting someone,picking someone up/ bringing someone away,1,,2,1
+Social,visiting family/ friends overnight,1,,4,3
+Substance use,smoking (not specified),1,,4,1
+Substance use,smoking weed/ taking drugs,1,,4,1
+Substance use,having an (alcoholic) drink/ having a borrel,1,,4,1
+Party,playing drinking games,1,,4,1
+Party,going out/partying,1,,4,2
+Party,going to a concert,1,,4,2
+Party,going to a festival,1,,4,2
+Party,preparing for a holiday/ event (celebration),1,,4,3
+preparing for a holiday/ event (celebration),christmas celebration,1,,3,1
+preparing for a holiday/ event (celebration),other holiday celebration,1,,3,1
+preparing for a holiday/ event (celebration),birthday celebration,1,,3,1
+Buying,going shopping,1,,4,3
+going shopping,going to a hardware store,1,,3,1
+going shopping,going to a bookstore,1,,3,1
+going shopping,buying gifts,1,,3,1
+Buying,online shopping,1,,4,3
+online shopping,buying gifts,1,,3,1
+going shopping,shopping clothing,1,,3,1
+going shopping,buying jewellery,1,,3,1
+going shopping,shopping home goods/ furniture,1,,3,1
+online shopping,shopping clothing,1,,3,1
+online shopping,buying jewlery,1,,3,1
+online shopping,shopping home goods/ furniture,1,,3,1
+Digital,listening to music/ radio,1,,4,1
+Digital,listening to a podcast,1,,4,1
+Digital,watching sport (tv),1,,4,1
+Digital,watching videos/ TV shows/ Movies,1,,4,1
+Digital,watching/ reading news,1,,4,1
+Digital,browsing on the laptop,1,,4,3
+browsing on the laptop,social media use,1,,3,2
+Digital,browsing on the phone,1,,4,3
+browsing on the phone,social media use,1,,3,2
+browsing on the laptop,texting/ chatting/checking messages,1,,3,1
+browsing on the laptop,emailing,1,,3,1
+browsing on the laptop,(video) calling,1,,3,1
+browsing on the phone,texting/ chatting/checking messages,1,,3,1
+browsing on the phone,emailing,1,,3,1
+browsing on the phone,(video) calling,1,,3,1
+Religion,religious activities,1,,4,3
+religious activities,going to church,1,,3,1
+Travel,traveling,1,,4,3
+traveling,city trip/ vacation,1,,3,2
+traveling,sightseeing,1,,3,2
+Transport,traveling,1,,4,3
+traveling,taking a flight,1,,3,1
+traveling,taking/ waiting for public transportation,1,,3,1
+traveling,walking,1,,3,1
+traveling,biking/ cycling,1,,3,1
+traveling,traveling by car,1,,3,1
+traveling,going home,1,,3,1
+Other,procrastinating,1,,4,1
+Other,meditating,1,,4,1
+Other,thinking,1,,4,1
