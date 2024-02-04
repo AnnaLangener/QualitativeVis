@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>SANKEY Experiment</title>
-<link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
-<style>
-  .node rect {
-    fill-opacity: .7;
-    shape-rendering: crispEdges;
-    cursor: move; /* Add cursor style for draggable elements */
-  }
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Activities</title>
+  <link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f0f0; /* Set your desired background color */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .node text {
-    pointer-events: none;
-    font-family: 'Tw Cen MT Std', sans-serif;
-    font-weight: 400; /* 400 */
-  }
+    h1 {
+      text-align: center;
+      color: #333; /* Set your desired title color */
+      font-family: 'Tw Cen MT Std', sans-serif;
+      margin-top: 20px;
+    }
 
-  .link {
-    fill: none;
-    stroke: #000;
-    stroke-opacity: .125;
-  }
+    svg {
+      margin-top: 20px;
+    }
 
-  .link:hover {
-    stroke-opacity: .5;
-  }
+    .node rect {
+      fill-opacity: .7;
+      shape-rendering: crispEdges;
+      cursor: move; /* Add cursor style for draggable elements */
+    }
 
-  .hidden {
-    display: none;
-  }
-</style>
+    .node text {
+      pointer-events: none;
+      font-family: 'Tw Cen MT Std', sans-serif;
+      font-weight: 400; /* 400 */
+    }
 
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-opacity: .125;
+    }
+
+    .link:hover {
+      stroke-opacity: .5;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
 <body>
+  <h1>Daily Activities</h1>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <script>
     var margin = { top: 10, right: 10, bottom: 10, left: 10 },
       width = 1000 - margin.left - margin.right,
-      height = 2500 - margin.top - margin.bottom;
+      height = 3000 - margin.top - margin.bottom;
 
     var formatNumber = d3.format(",.0f"),
       format = function (d) { return formatNumber(d); },
       color = d3.scaleOrdinal().range(d3.schemePastel2);
-      
+
     const colorScale = d3.scaleOrdinal().range(d3.schemePastel1);
 
     var svg = d3.select("body").append("svg")
@@ -51,12 +73,13 @@
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
     var sankey = d3.sankey()
       .nodeWidth(20)
       .nodePadding(10)  /* Thickness lines */
       .size([width, height]);
 
-    /* BRING DATA IN RIGHT FORMAT */
+    /* BRING DATA IN RIGHT FORMAT https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv?token=GHSAT0AAAAAACM5NKPNCBNWTT7LFNZK6J4IZN6W3MA */
     d3.csv("TestFormatVis2.csv").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 
@@ -82,12 +105,15 @@
       
 
       /* SANKEY */
+      
       var graph = sankey(sankeydata);
       
       var node = svg.append("g").selectAll(".node")
         .data(graph.nodes)
         .enter().append("g")
         .attr("class", "node")
+    
+
           
       node.append("rect") // 
                 .attr("x", function (d) {
@@ -133,7 +159,7 @@
         } else if (d.targetLinks[0].level_target == 1) {
           d.x0 = width - 0.25 * width;
         }
-        return d.x0 + 20;
+        return d.x0 + 23;
       })
       .attr("y", function (d) { return (d.y1 + d.y0) / 2; })
       .attr("dy", "0.35em")
@@ -151,13 +177,13 @@
            return d.target.x1 = 0;
         } else if (d.level_target == 3) {
             console.log("yes 3")
-            return d.target.x1 = width - 3 * (width / 4);
+            return d.target.x1 = width - 3 * (width / 4) + sankey.nodeWidth();
           } else if (d.level_target == 2) {
             console.log("yes 2")
-            return d.target.x1 = width - 1.9 * (width / 4);
+            return d.target.x1 = width - 1.9 * (width / 4) + sankey.nodeWidth();
           } else if (d.level_target == 1) {
             console.log("yes 1")
-            return d.target.x1 = width - 0.25 * width;
+            return d.target.x1 = width - 0.25 * width + sankey.nodeWidth();
           }
         })
         .attr("x", function (d) {
