@@ -136,11 +136,11 @@
                 if (d.sourceLinks.length > 0 && d.targetLinks.length == 0 ) {
                     // Node is a source, assign a unique color based on its name
                     const colorIndex = color(d.name.replace(/ .*/, ""));
-                    d.color = d3.rgb(colorIndex).darker(1);
+                    d.color = d3.rgb(colorIndex).darker(0.45);
                 } else  {
                     // Node is a target, use a lighter version of the target color
                     const firstTargetColor = d.targetLinks[0].source.color || colorScale(0) ;
-                    d.color = d3.rgb(firstTargetColor).brighter(0.5);
+                    d.color = d3.rgb(firstTargetColor).brighter(0.25);
                 }
             return d.color;
         })
@@ -163,7 +163,11 @@
       })
       .attr("y", function (d) { return (d.y1 + d.y0) / 2; })
       .attr("dy", "0.35em")
-      .text(function (d) { return d.name; });
+      .text(function (d) { return capitalizeFirstLetter(d.name); });
+      function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+        
+      }
       
 
      var link = svg.append("g").selectAll(".link")
@@ -171,6 +175,9 @@
         .enter().append("path")
         .attr("class", "link")
         .attr("stroke-width", function (d) { return d.width; })
+        .style("stroke", function (d) {
+            return d.source.color.darker(0.5);
+          })
         .attr("x", function (d) {console.log(d) 
          if (d.level_target == 4) {
            console.log("yes 4")
