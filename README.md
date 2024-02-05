@@ -1,0 +1,1 @@
+Part of the project "Assessing Daily Life Activities: Comparing Predefined Categories with the Qualitative Analysis of Open-Ended Responses in Experience Sampling Methodology (ESM)" Marie Stadel, Anna Langener, Laura Bringmann
