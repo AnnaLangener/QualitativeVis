@@ -40,7 +40,7 @@
       fill: none;
       stroke: #000;
       stroke-opacity: .125;
-    }
+    }g
 
     .link:hover {
       stroke-opacity: .5;
@@ -58,7 +58,7 @@
   <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <script>
     var margin = { top: 10, right: 10, bottom: 10, left: 10 },
-      width = 1000 - margin.left - margin.right,
+      width = 1050 - margin.left - margin.right,
       height = 3000 - margin.top - margin.bottom;
 
     var formatNumber = d3.format(",.0f"),
@@ -79,7 +79,7 @@
       .nodePadding(10)  /* Thickness lines */
       .size([width, height]);
 
-    /* BRING DATA IN RIGHT FORMAT https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv?token=GHSAT0AAAAAACM5NKPNCBNWTT7LFNZK6J4IZN6W3MA */
+    /* BRING DATA IN RIGHT FORMAT */
     d3.csv("TestFormatVis2.csv").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 
@@ -165,9 +165,7 @@
       .attr("dy", "0.35em")
       .text(function (d) { return capitalizeFirstLetter(d.name); });
       function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-        
-      }
+        return string.charAt(0).toUpperCase() + string.slice(1);}
       
 
      var link = svg.append("g").selectAll(".link")
