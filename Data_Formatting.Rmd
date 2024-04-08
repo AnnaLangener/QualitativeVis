@@ -12,6 +12,8 @@ Sankey Diagram is based on: <https://gist.github.com/d3noob/013054e8d7807dff7624
 
 In this repository we provide example code to visualize the categories/ codebook as a Sankey Diagramm:
 
+[ADD LINK]
+
 ![](Example_Picture.png){width="567"}
 
 ## How to get data into the right structure for visualization?

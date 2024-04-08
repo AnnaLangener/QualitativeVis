@@ -11,6 +11,8 @@ Sankey Diagram is based on:
 In this repository we provide example code to visualize the categories/
 codebook as a Sankey Diagramm:
 
+\[ADD LINK\]
+
 <img src="Example_Picture.png" width="567" />
 
 ## How to get data into the right structure for visualization?
