@@ -79,30 +79,30 @@
       .nodePadding(10)  /* Thickness lines */
       .size([width, height]);
 
-    /* BRING DATA IN RIGHT FORMAT */
-    d3.csv("https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv").then(function (data) {
+    /* BRING DATA IN RIGHT FORMAT: "https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv" */
+    d3.csv("TestFormatVis_new.csv").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 
       data.forEach(function (d) {
-        sankeydata.nodes.push({ "name": d.source, "level_source": +d.level_source,"level_target": +d.level_target });
-        sankeydata.nodes.push({ "name": d.target, "level_source": +d.level_source,"level_target": +d.level_target });
-        sankeydata.links.push({ "source": d.source, "target": d.target, "value": +d.value, "level_source": +d.level_source,"level_target": +d.level_target});
+        sankeydata.nodes.push({ "name": d.source });
+        sankeydata.nodes.push({ "name": d.target });
+        sankeydata.links.push({ "source": d.source, "target": d.target, "value": +d.value, "level_source": +d.level_source,"level_target": +d.level_target, "Example_text": d.Example_text});
       });
       
       sankeydata.nodes = Array.from( /* deduplicate node names */
         d3.group(sankeydata.nodes, d => d.name),
         ([value]) => (value)
       );
-
+      
       sankeydata.links.forEach(function (d, i) {
         sankeydata.links[i].source = sankeydata.nodes.indexOf(sankeydata.links[i].source);
         sankeydata.links[i].target = sankeydata.nodes.indexOf(sankeydata.links[i].target);
       });
-
-      sankeydata.nodes.forEach(function (d, i) {
-        sankeydata.nodes[i] = { "name": d, "level_source": +d.level_source,"level_target": +d.level_target };
-      });
       
+      
+      sankeydata.nodes.forEach(function (d, i) {
+        sankeydata.nodes[i] = { "name": d};
+      });
 
       /* SANKEY */
       
@@ -131,7 +131,7 @@
         .attr("y", function (d) { return d.y0; })
         .attr("height", function (d) { return d.y1 - d.y0; })
         .attr("width", sankey.nodeWidth())
-        .style("fill", function (d) {
+        .style("fill", function (d) { 
             // Check if the node is a source or target
                 if (d.sourceLinks.length > 0 && d.targetLinks.length == 0 ) {
                     // Node is a source, assign a unique color based on its name
@@ -144,9 +144,9 @@
                 }
             return d.color;
         })
-        .style("stroke", function (d) { return d3.rgb(d.color).darker(0); })
+        .style("stroke", function (d) { return d3.rgb(d.color).darker(0); }) // Box line
         .append("title")
-        .text(function (d) { return d.name + "\n" + format(d.value); });
+        .text(function (d) {return d.name + "\n" + format(d.value) + d.Example_text;  }); // Text that appears for mouseover, d.name + "\n" + format(d.value)
 
       node.append("text")
       .attr("x", function (d) {
@@ -176,18 +176,14 @@
         .style("stroke", function (d) {
             return d.source.color.darker(0.5);
           })
-        .attr("x", function (d) {console.log(d) 
+        .attr("x", function (d) {
          if (d.level_target == 4) {
-           console.log("yes 4")
            return d.target.x1 = 0;
         } else if (d.level_target == 3) {
-            console.log("yes 3")
             return d.target.x1 = width - 3 * (width / 4) + sankey.nodeWidth();
           } else if (d.level_target == 2) {
-            console.log("yes 2")
             return d.target.x1 = width - 1.9 * (width / 4) + sankey.nodeWidth();
           } else if (d.level_target == 1) {
-            console.log("yes 1")
             return d.target.x1 = width - 0.25 * width + sankey.nodeWidth();
           }
         })
