@@ -194,19 +194,12 @@ for (i in 1:length(checkcol)) {
         nrow(Source_Target[Source_Target$source %in% tragets_lowerlevel[k], ]) + 1
       if (value > 1) {
         Source_Target$value[Source_Target$source == checkcol[i] &
-                              Source_Target$targe == targets[j]] <- value
+                              Source_Target$target == targets[j]] <- value
       }
     }
   }
 }
-```
 
-    ## Warning: Unknown or uninitialised column: `targe`.
-    ## Unknown or uninitialised column: `targe`.
-    ## Unknown or uninitialised column: `targe`.
-    ## Unknown or uninitialised column: `targe`.
-
-``` r
 # Correct transport case (two sources go to one target)
 target_counts <- Source_Target %>%
   group_by(target) %>%
