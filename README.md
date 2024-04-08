@@ -36,11 +36,12 @@ head(Overview_Codes)
     ## 5     getting ready for bed     3
     ## 6                   Resting     4
 
-\*\* File 2: Option A\*\* The second data file contains how the
-different codes are related to each other. It contains a column called
-“source” and a column called “target”. For example, our first “source”
-code is *Food*, which has the subcode (“target”) *cooking/ preparing a
-meal*.
+**File 2: Option A**
+
+The second data file contains how the different codes are related to
+each other. It contains a column called “source” and a column called
+“target”. For example, our first “source” code is *Food*, which has the
+subcode (“target”) *cooking/ preparing a meal*.
 
 ``` r
 Source_Target <- read.csv("/Users/annalangener/projects/QualitativeVis/Source_Target.csv")
@@ -55,7 +56,7 @@ head(Source_Target)
     ## 5                      Food going out for fast food restaurant
     ## 6                      Food              going to a restaurant
 
-\*\* File 2: Option B\*\*
+**File 2: Option B**
 
 Another option is to have a file that contains one column per level.
 However, this file must also be transformed into a dataframe containing
@@ -78,18 +79,6 @@ Here we transform this file to the needed dataframe;
 
 ``` r
 library(tidyverse)
-```
-
-    ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-    ## ✔ ggplot2 3.4.2     ✔ purrr   1.0.1
-    ## ✔ tibble  3.2.1     ✔ dplyr   1.1.2
-    ## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
-    ## ✔ readr   2.1.2     ✔ forcats 0.5.2
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-
-``` r
 # This step is needed if we have not codes on all leveles
 Source_Target_2$Level.3[is.na(Source_Target_2$Level.3)] <- Source_Target_2$Category[is.na(Source_Target_2$Level.3)]
 
