@@ -19,9 +19,11 @@ codebook as a Sankey Diagramm:
 
 ### 1) Required data files to create the visualization
 
-**File 1** To visualize the data, we need two files. The first file
-should contain an overview of all unique codes and their corresponding
-level. The columns should be named “Code” and “Level”.
+**File 1**
+
+To visualize the data, we need two files. The first file should contain
+an overview of all unique codes and their corresponding level. The
+columns should be named “Code” and “Level”.
 
 ``` r
 Overview_Codes <- read.csv("/Users/annalangener/projects/QualitativeVis/Overview_Codes.csv")
@@ -79,6 +81,7 @@ Here we transform this file to the needed dataframe;
 
 ``` r
 library(tidyverse)
+
 # This step is needed if we have not codes on all leveles
 Source_Target_2$Level.3[is.na(Source_Target_2$Level.3)] <- Source_Target_2$Category[is.na(Source_Target_2$Level.3)]
 
@@ -87,6 +90,7 @@ Source_Target_2$Level.2[is.na(Source_Target_2$Level.2)] <- Source_Target_2$Level
 # ... if more levels are present
 
 #adapted from https://rpubs.com/droach/CPP526-codethrough
+
 Source_Target_Category <- Source_Target_2[,c(1,2)] %>%
   mutate(row = row_number()) %>%                                       
   pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
@@ -249,4 +253,38 @@ head(Source_Target)
 ### 6) Manual adjustment
 
 If the visualization has some overlapping codes, it may help to move the
-order of the codes around in the data file.
+order of the codes around in the data file. For example, it can be a
+good start to sort the data file based on source and target. It can also
+be moved around manually in the csv file. We have found the best order
+by trial and error.
+
+``` r
+Source_Target <- Source_Target[order(Source_Target$source,Source_Target$target,Source_Target$value), ]
+
+
+write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/Test_data.csv")
+```
+
+### 
+
+### OPTIONAL: Adapting the HTML file in R
+
+``` r
+generate_html <- function(html_file_path, data) {
+
+  html_template <- readLines(html_file_path, warn = FALSE)
+  modified_html <- gsub("TestFormatVis_new.csv", data, html_template)
+  
+  output_file <- "output.html"
+  writeLines(modified_html, output_file)
+  
+  return(output_file)
+}
+
+# Example usage
+html_file_path <- "index.html"
+data <- "Test_data.csv" # add here your new data
+output_file <- generate_html(html_file_path, data)
+```
+
+### 

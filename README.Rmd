@@ -21,30 +21,37 @@ In this repository we provide example code to visualize the categories/ codebook
 ### 1) Required data files to create the visualization
 
 **File 1**
+
 To visualize the data, we need two files. The first file should contain an overview of all unique codes and their corresponding level. The columns should be named "Code" and "Level".
 
 ```{r echo=TRUE}
 Overview_Codes <- read.csv("/Users/annalangener/projects/QualitativeVis/Overview_Codes.csv")
 head(Overview_Codes)
 ```
-** File 2: Option A**
+
+**File 2: Option A**
+
 The second data file contains how the different codes are related to each other. It contains a column called "source" and a column called "target". For example, our first "source" code is *Food*, which has the subcode ("target") *cooking/ preparing a meal*.
 
 ```{r echo=TRUE}
 Source_Target <- read.csv("/Users/annalangener/projects/QualitativeVis/Source_Target.csv")
 head(Source_Target)
 ```
-** File 2: Option B**
+
+**File 2: Option B**
 
 Another option is to have a file that contains one column per level. However, this file must also be transformed into a dataframe containing only two columns, called "source" and "target".
+
 ```{r echo=TRUE}
 Source_Target_2 <- read.csv("Tree_Example.csv")
 head(Source_Target_2)
 ```
 
 Here we transform this file to the needed dataframe;
-```{r echo=TRUE}
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
 library(tidyverse)
+
 # This step is needed if we have not codes on all leveles
 Source_Target_2$Level.3[is.na(Source_Target_2$Level.3)] <- Source_Target_2$Category[is.na(Source_Target_2$Level.3)]
 
@@ -53,6 +60,7 @@ Source_Target_2$Level.2[is.na(Source_Target_2$Level.2)] <- Source_Target_2$Level
 # ... if more levels are present
 
 #adapted from https://rpubs.com/droach/CPP526-codethrough
+
 Source_Target_Category <- Source_Target_2[,c(1,2)] %>%
   mutate(row = row_number()) %>%                                       
   pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
@@ -88,7 +96,6 @@ Source_Target_2 <- Source_Target_2[!duplicated(Source_Target_2),]
 Source_Target <- Source_Target_2[Source_Target_2$source != Source_Target_2$target,]
 head(Source_Target)
 ```
-
 
 ### 2) Merge both files
 
@@ -137,7 +144,7 @@ for (i in 1:length(checkcol)) {
         nrow(Source_Target[Source_Target$source %in% tragets_lowerlevel[k], ]) + 1
       if (value > 1) {
         Source_Target$value[Source_Target$source == checkcol[i] &
-                              Source_Target$targe == targets[j]] <- value
+                              Source_Target$target == targets[j]] <- value
       }
     }
   }
@@ -180,4 +187,36 @@ head(Source_Target)
 
 ### 6) Manual adjustment
 
-If the visualization has some overlapping codes, it may help to move the order of the codes around in the data file.
+If the visualization has some overlapping codes, it may help to move the order of the codes around in the data file. For example, it can be a good start to sort the data file based on source and target. It can also be moved around manually in the csv file. We have found the best order by trial and error.
+
+```{r echo=TRUE}
+Source_Target <- Source_Target[order(Source_Target$source,Source_Target$target,Source_Target$value), ]
+
+
+write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/Test_data.csv")
+```
+
+### 
+
+### OPTIONAL: Adapting the HTML file in R
+
+```{r echo=TRUE}
+generate_html <- function(html_file_path, data) {
+
+  html_template <- readLines(html_file_path, warn = FALSE)
+  modified_html <- gsub("TestFormatVis_new.csv", data, html_template)
+  
+  output_file <- "output.html"
+  writeLines(modified_html, output_file)
+  
+  return(output_file)
+}
+
+# Example usage
+html_file_path <- "index.html"
+data <- "Test_data.csv" # add here your new data
+output_file <- generate_html(html_file_path, data)
+
+```
+
+### 
