@@ -45,7 +45,7 @@ target = data.frame(level_target = Overview_Codes$Level,Code = Overview_Codes$Co
 Source_Target <- left_join(Source_Target, source, by = c("source" = "Code"))
 Source_Target <- left_join(Source_Target, target, by = c("target" = "Code"))
 
-Source_Target
+head(Source_Target)
 ```
 
 ### 4) Add the "value" column
