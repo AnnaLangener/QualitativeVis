@@ -20,19 +20,75 @@ In this repository we provide example code to visualize the categories/ codebook
 
 ### 1) Required data files to create the visualization
 
+**File 1**
 To visualize the data, we need two files. The first file should contain an overview of all unique codes and their corresponding level. The columns should be named "Code" and "Level".
 
 ```{r echo=TRUE}
 Overview_Codes <- read.csv("/Users/annalangener/projects/QualitativeVis/Overview_Codes.csv")
 head(Overview_Codes)
 ```
-
+** File 2: Option A**
 The second data file contains how the different codes are related to each other. It contains a column called "source" and a column called "target". For example, our first "source" code is *Food*, which has the subcode ("target") *cooking/ preparing a meal*.
 
 ```{r echo=TRUE}
 Source_Target <- read.csv("/Users/annalangener/projects/QualitativeVis/Source_Target.csv")
 head(Source_Target)
 ```
+** File 2: Option B**
+
+Another option is to have a file that contains one column per level. However, this file must also be transformed into a dataframe containing only two columns, called "source" and "target".
+```{r echo=TRUE}
+Source_Target_2 <- read.csv("Tree_Example.csv")
+head(Source_Target_2)
+```
+
+Here we transform this file to the needed dataframe;
+```{r echo=TRUE}
+library(tidyverse)
+# This step is needed if we have not codes on all leveles
+Source_Target_2$Level.3[is.na(Source_Target_2$Level.3)] <- Source_Target_2$Category[is.na(Source_Target_2$Level.3)]
+
+Source_Target_2$Level.2[is.na(Source_Target_2$Level.2)] <- Source_Target_2$Level.3[is.na(Source_Target_2$Level.2)]
+
+# ... if more levels are present
+
+#adapted from https://rpubs.com/droach/CPP526-codethrough
+Source_Target_Category <- Source_Target_2[,c(1,2)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+Source_Target_Level3 <- Source_Target_2[,c(2,3)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+Source_Target_Level2 <- Source_Target_2[,c(3,4)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+#... if more levels are present
+
+Source_Target_2 <- rbind(Source_Target_Category,Source_Target_Level3,Source_Target_Level2)[,c(3,4)]
+Source_Target_2 <- Source_Target_2[!duplicated(Source_Target_2),]
+
+Source_Target <- Source_Target_2[Source_Target_2$source != Source_Target_2$target,]
+head(Source_Target)
+```
+
 
 ### 2) Merge both files
 

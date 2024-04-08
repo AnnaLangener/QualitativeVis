@@ -17,13 +17,11 @@ codebook as a Sankey Diagramm:
 
 ## How to get data into the right structure for visualization?
 
-\[ADD ALTERNATIVE FORMAT BASED ON Changedata.R\]
-
 ### 1) Required data files to create the visualization
 
-To visualize the data, we need two files. The first file should contain
-an overview of all unique codes and their corresponding level. The
-columns should be named “Code” and “Level”.
+**File 1** To visualize the data, we need two files. The first file
+should contain an overview of all unique codes and their corresponding
+level. The columns should be named “Code” and “Level”.
 
 ``` r
 Overview_Codes <- read.csv("/Users/annalangener/projects/QualitativeVis/Overview_Codes.csv")
@@ -38,10 +36,11 @@ head(Overview_Codes)
     ## 5     getting ready for bed     3
     ## 6                   Resting     4
 
-The second data file contains how the different codes are related to
-each other. It contains a column called “source” and a column called
-“target”. For example, our first “source” code is *Food*, which has the
-subcode (“target”) *cooking/ preparing a meal*.
+\*\* File 2: Option A\*\* The second data file contains how the
+different codes are related to each other. It contains a column called
+“source” and a column called “target”. For example, our first “source”
+code is *Food*, which has the subcode (“target”) *cooking/ preparing a
+meal*.
 
 ``` r
 Source_Target <- read.csv("/Users/annalangener/projects/QualitativeVis/Source_Target.csv")
@@ -55,6 +54,95 @@ head(Source_Target)
     ## 4                      Food                      ordering food
     ## 5                      Food going out for fast food restaurant
     ## 6                      Food              going to a restaurant
+
+\*\* File 2: Option B\*\*
+
+Another option is to have a file that contains one column per level.
+However, this file must also be transformed into a dataframe containing
+only two columns, called “source” and “target”.
+
+``` r
+Source_Target_2 <- read.csv("Tree_Example.csv")
+head(Source_Target_2)
+```
+
+    ##   Category                   Level.3 Level.2                            Level.1
+    ## 1     Food cooking/ preparing a meal    <NA>       making/ having a tea/ coffee
+    ## 2     Food                      <NA>    <NA>                             baking
+    ## 3     Food                      <NA>    <NA>                      ordering food
+    ## 4     Food                      <NA>    <NA> going out for fast food restaurant
+    ## 5     Food                      <NA>    <NA>              going to a restaurant
+    ## 6     Food                      <NA>    <NA>                    going to a cafe
+
+Here we transform this file to the needed dataframe;
+
+``` r
+library(tidyverse)
+```
+
+    ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+    ## ✔ ggplot2 3.4.2     ✔ purrr   1.0.1
+    ## ✔ tibble  3.2.1     ✔ dplyr   1.1.2
+    ## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+    ## ✔ readr   2.1.2     ✔ forcats 0.5.2
+    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
+
+``` r
+# This step is needed if we have not codes on all leveles
+Source_Target_2$Level.3[is.na(Source_Target_2$Level.3)] <- Source_Target_2$Category[is.na(Source_Target_2$Level.3)]
+
+Source_Target_2$Level.2[is.na(Source_Target_2$Level.2)] <- Source_Target_2$Level.3[is.na(Source_Target_2$Level.2)]
+
+# ... if more levels are present
+
+#adapted from https://rpubs.com/droach/CPP526-codethrough
+Source_Target_Category <- Source_Target_2[,c(1,2)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+Source_Target_Level3 <- Source_Target_2[,c(2,3)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+Source_Target_Level2 <- Source_Target_2[,c(3,4)] %>%
+  mutate(row = row_number()) %>%                                       
+  pivot_longer(cols = -row, names_to = "column", values_to = "source") %>%
+  mutate(column = match(column, names(.))) %>%   
+  group_by(row) %>% 
+  mutate(target = lead(source, order_by = column)) %>% 
+  filter(!is.na(target)) %>%                           
+  ungroup() 
+
+#... if more levels are present
+
+Source_Target_2 <- rbind(Source_Target_Category,Source_Target_Level3,Source_Target_Level2)[,c(3,4)]
+Source_Target_2 <- Source_Target_2[!duplicated(Source_Target_2),]
+
+Source_Target <- Source_Target_2[Source_Target_2$source != Source_Target_2$target,]
+head(Source_Target)
+```
+
+    ## # A tibble: 6 × 2
+    ##   source            target                                     
+    ##   <chr>             <chr>                                      
+    ## 1 Food              cooking/ preparing a meal                  
+    ## 2 Personal grooming getting ready                              
+    ## 3 Personal grooming getting ready for bed                      
+    ## 4 City              going to the city                          
+    ## 5 Nature            going outside                              
+    ## 6 University        going/ being at university/ faculty/library
 
 ### 2) Merge both files
 
@@ -75,20 +163,15 @@ Source_Target <- left_join(Source_Target, target, by = c("target" = "Code"))
 head(Source_Target)
 ```
 
-    ##                      source                             target level_source
-    ## 1                      Food          cooking/ preparing a meal            4
-    ## 2 cooking/ preparing a meal       making/ having a tea/ coffee            3
-    ## 3                      Food                             baking            4
-    ## 4                      Food                      ordering food            4
-    ## 5                      Food going out for fast food restaurant            4
-    ## 6                      Food              going to a restaurant            4
-    ##   level_target
-    ## 1            3
-    ## 2            1
-    ## 3            1
-    ## 4            1
-    ## 5            1
-    ## 6            1
+    ## # A tibble: 6 × 4
+    ##   source            target                             level_source level_target
+    ##   <chr>             <chr>                                     <int>        <int>
+    ## 1 Food              cooking/ preparing a meal                     4            3
+    ## 2 Personal grooming getting ready                                 4            3
+    ## 3 Personal grooming getting ready for bed                         4            3
+    ## 4 City              going to the city                             4            3
+    ## 5 Nature            going outside                                 4            3
+    ## 6 University        going/ being at university/ facul…            4            3
 
 ### 4) Add the “value” column
 
@@ -127,7 +210,14 @@ for (i in 1:length(checkcol)) {
     }
   }
 }
+```
 
+    ## Warning: Unknown or uninitialised column: `targe`.
+    ## Unknown or uninitialised column: `targe`.
+    ## Unknown or uninitialised column: `targe`.
+    ## Unknown or uninitialised column: `targe`.
+
+``` r
 # Correct transport case (two sources go to one target)
 target_counts <- Source_Target %>%
   group_by(target) %>%
@@ -164,20 +254,15 @@ write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/TestFormatV
 head(Source_Target)
 ```
 
-    ##                      source                             target level_source
-    ## 1                      Food          cooking/ preparing a meal            4
-    ## 2 cooking/ preparing a meal       making/ having a tea/ coffee            3
-    ## 3                      Food                             baking            4
-    ## 4                      Food                      ordering food            4
-    ## 5                      Food going out for fast food restaurant            4
-    ## 6                      Food              going to a restaurant            4
-    ##   level_target value
-    ## 1            3     1
-    ## 2            1     1
-    ## 3            1     1
-    ## 4            1     1
-    ## 5            1     1
-    ## 6            1     1
+    ## # A tibble: 6 × 5
+    ##   source            target                       level_source level_target value
+    ##   <chr>             <chr>                               <int>        <int> <dbl>
+    ## 1 Food              cooking/ preparing a meal               4            3     1
+    ## 2 Personal grooming getting ready                           4            3     9
+    ## 3 Personal grooming getting ready for bed                   4            3     5
+    ## 4 City              going to the city                       4            3     2
+    ## 5 Nature            going outside                           4            3     4
+    ## 6 University        going/ being at university/…            4            3     3
 
 ### 6) Manual adjustment
 
