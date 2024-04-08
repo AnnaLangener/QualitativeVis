@@ -17,6 +17,8 @@ codebook as a Sankey Diagramm:
 
 ## How to get data into the right structure for visualization?
 
+\[ADD ALTERNATIVE FORMAT BASED ON Changedata.R\]
+
 ### 1) Required data files to create the visualization
 
 To visualize the data, we need two files. The first file should contain
