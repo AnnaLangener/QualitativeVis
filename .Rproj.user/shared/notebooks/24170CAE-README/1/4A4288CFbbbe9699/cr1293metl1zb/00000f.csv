@@ -1,0 +1,7 @@
+"0","#Source_Target <- Source_Target[order(Source_Target$value,Source_Target$level_source, Source_Target$level_target),]"
+"0",""
+"0","#write.csv(Source_Target,""/Users/annalangener/projects/QualitativeVis/Skimina_new.csv"")"
+"0",""
+"0","write.csv(Source_Target,""/Users/annalangener/projects/QualitativeVis/StadelLangener_new.csv"")"
+"0",""
+"0","head(Source_Target)"

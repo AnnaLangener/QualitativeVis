@@ -1,0 +1,8 @@
+"0","target_counts <- Source_Target %>%"
+"0","  group_by(source) %>%"
+"0","  summarize(value = n())"
+"0",""
+"0","Source_Target <- left_join(Source_Target, target_counts, by = c(""target"" = ""source""))"
+"0",""
+"0","Source_Target$value[is.na(Source_Target$value)] = 1"
+"0",""
