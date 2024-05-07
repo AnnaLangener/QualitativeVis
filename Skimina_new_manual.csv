@@ -1,0 +1,148 @@
+,source,target,level_source,level_target,value
+1,Entertainment,Creative hobbies,4,3,1
+24,Creative hobbies,Creative hobby,3,2,1
+79,Creative hobby,"Creative hobby (e.g., singing, dancing, playing instruments)",2,1,1
+4,Entertainment,Physical activity,4,3,1
+40,Physical activity,Sports,3,2,1
+5,Entertainment,Repairing,4,3,1
+41,Repairing,Do-it-yourself,3,2,1
+2,Entertainment,Indoor leisure and resting,4,3,10
+33,Indoor leisure and resting,Resting,3,2,1
+29,Indoor leisure and resting,Listening to music,3,2,1
+35,Indoor leisure and resting,Surfing the Internet,3,2,1
+32,Indoor leisure and resting,Computer games,3,2,1
+34,Indoor leisure and resting,Watching TV/movies,3,2,1
+26,Indoor leisure and resting,News,3,2,1
+80,News,Watching or reading news,2,1,1
+25,Indoor leisure and resting,Reading,3,2,1
+31,Indoor leisure and resting,Board games,3,2,1
+30,Indoor leisure and resting,Intellectual entertainment,3,2,1
+83,Intellectual entertainment,"Intellectual entertainment (e.g., crosswords)",2,1,1
+27,Indoor leisure and resting,Hobby,3,2,1
+3,Entertainment,Outdoor leisure,4,3,5
+28,Outdoor leisure,Hobby,3,2,1
+81,Hobby,Getting new information on ones hobby,2,1,1
+82,Hobby,"Hobby (e.g., fishing)",2,1,1
+36,Outdoor leisure,Cultural events,3,2,1
+84,Cultural events,"Cultural events (e.g., concert, theatre play)",2,1,1
+37,Outdoor leisure,Ability games,3,2,1
+85,Ability games,"Ability games (e.g., billiards, bowling)",2,1,1
+39,Outdoor leisure,Walking,3,2,1
+86,Walking,Hiking,2,1,1
+38,Outdoor leisure,Sightseeing,3,2,1
+6,Household,Errands,4,3,2
+42,Errands,Formal errands,3,2,1
+87,Formal errands,"Formal errands (e.g., at the post office)",2,1,1
+43,Errands,Informal errands,3,2,1
+88,Informal errands,"Informal errands (e.g., making an appointment at a beauty salon)",2,1,1
+7,Household,Housework,4,3,3
+44,Housework,Caring for a family,3,2,1
+89,Caring for a family,"Caring for a family (e.g., cooking)",2,1,1
+45,Housework,Cleaning,3,2,1
+46,Housework,Cooking,3,2,1
+8,Household,Shopping,4,3,4
+90,Shopping,Shopping at a store,3,1,1
+48,Shopping,Buying gifts,3,2,2
+91,Buying gifts,Buying gifts online,2,1,1
+92,Buying gifts,Buying gifts at a store,2,1,1
+47,Shopping,Shopping online,3,2,1
+9,Maintenance,Health and personal care,4,3,6
+49,Health and personal care,Medical care,3,2,1
+93,Medical care,Medical errands,2,1,1
+50,Health and personal care,Getting ready,3,2,1
+94,Getting ready,Everyday getting ready to go out,2,1,1
+97,Getting ready for a party/date,Getting ready for a party,2,1,1
+98,Getting ready for a party/date,Getting ready for a date,2,1,1
+51,Health and personal care,Beauty treatment,3,2,2
+95,Beauty treatment,Beauty treatment at a beauty salon,2,1,1
+96,Beauty treatment,Beauty treatment at home,2,1,1
+52,Health and personal care,Getting ready for a party/date,3,2,2
+10,Maintenance,Physiology,4,3,4
+53,Physiology,Eating,3,2,1
+54,Physiology,Sleeping,3,2,1
+55,Physiology,Hygiene,3,2,1
+56,Physiology,Drinking alcohol,3,2,1
+11,Maintenance,Transportation,4,3,1
+57,Transportation,Traveling,3,2,1
+12,Maintenance,Waiting,4,3,1
+13,Other/Socializing,Helping,4,3,2
+99,Helping,Helping someone one knows,3,1,1
+100,Helping,Helping a stranger,3,1,1
+14,Other/Socializing,Important events,4,3,2
+101,Important events,"Someone else important events (e.g., wedding)",3,1,1
+102,Important events,Ones important event,3,1,1
+15,Other/Socializing,Social activity,4,3,2
+103,Social activity,Passive engagement in social activity,3,1,1
+104,Social activity,"Active engagement in social activity (e.g., volunteering)",3,1,1
+16,Socializing,Family time,4,3,10
+58,Family time,Babysitting,3,2,5
+105,Babysitting,"Caring for a child (e.g., cooking)",2,1,1
+106,Babysitting,Training cognitive skills with a child,2,1,1
+107,Babysitting,Training physical skills with a child,2,1,1
+108,Babysitting,Playing with a child,2,1,1
+109,Babysitting,Participating in important events in a child’s life,2,1,1
+59,Family time,Talking to family,3,2,2
+110,Talking to family,Talking with a family member face to face,2,1,1
+111,Talking to family,Talking with a family member on the phone or online,2,1,1
+60,Family time,Time with family,3,2,3
+112,Time with family,Hosting a family member,2,1,1
+113,Time with family,Meeting a family member in a public place,2,1,1
+114,Time with family,Visiting a family member,2,1,1
+17,Socializing,Other socializing,4,3,1
+61,Other socializing,Talking to strangers,3,2,1
+115,Talking to strangers,Talking to a stranger face to face,2,1,1
+18,Socializing,Time with friends,4,3,10
+62,Time with friends,Talking to acquaintances,3,2,2
+116,Talking to acquaintances,Talking with acquaintances face to face,2,1,1
+117,Talking to acquaintances,Talking with acquaintances on the phone or online,2,1,1
+63,Time with friends,Talking to friends,3,2,2
+118,Talking to friends,Talking with friends face to face,2,1,1
+119,Talking to friends,Talking with friends on the phone or online,2,1,1
+64,Time with friends,Time with acquaintances,3,2,3
+120,Time with acquaintances,Hosting acquaintances,2,1,1
+121,Time with acquaintances,Meeting acquaintances in a public place,2,1,1
+122,Time with acquaintances,Visiting acquaintances,2,1,1
+123,Time with friends,Hosting friends,3,1,1
+124,Time with friends,Meeting friends in a public place,3,1,1
+125,Time with friends,Visiting friends,3,1,1
+19,Socializing,Time with partner,4,3,7
+65,Time with partner,Date,3,2,1
+126,Date,Dating,2,1,1
+67,Time with partner,Talking to partner,3,2,2
+127,Talking to partner,Talking with a partner face to face,2,1,1
+128,Talking to partner,Talking with a partner on the phone or online,2,1,1
+66,Time with partner,Sexual activity,3,2,1
+129,Time with partner,Hosting a partner,3,1,1
+130,Time with partner,Meeting a partner in a public place,3,1,1
+131,Time with partner,Visiting a partner,3,1,1
+20,Socializing,Time with pets,4,3,4
+68,Time with pets,Caring for a pet,3,2,4
+132,Caring for a pet,Walking pets,2,1,1
+133,Caring for a pet,"Caring for pets (e.g., feeding)",2,1,1
+134,Caring for a pet,Playing with pets,2,1,1
+135,Caring for a pet,Training pets,2,1,1
+21,Work and studying,Studying and extra classes,4,3,10
+69,Studying and extra classes,Exams,3,2,3
+136,Exams,Taking exams at school,2,1,1
+137,Exams,Taking exams at a university,2,1,1
+138,Exams,Taking exams at extra classes,2,1,1
+70,Studying and extra classes,Extra classes,3,2,1
+139,Extra classes,Participating in extra classes,2,1,1
+72,Studying and extra classes,Studying,3,2,6
+142,Studying,Studying for school individually,2,1,1
+143,Studying,Studying for school in a group of students,2,1,1
+144,Studying,Studying for university classes individually,2,1,1
+145,Studying,Studying for university classes in a group of students,2,1,1
+146,Studying,Studying for extra classes individually,2,1,1
+147,Studying,Studying for extra classes in a group of students,2,1,1
+22,Work and studying,School/University classes,4,3,2
+71,School/University classes,In lecture,3,2,2
+140,In lecture,Participating in school lessons,2,1,1
+141,In lecture,Participating in lectures at a university,2,1,1
+23,Work and studying,Work,4,3,1
+73,Work,Working,3,2,1
+74,Other,Planning,4,2,1
+75,Other,"Surveys, lotteries",4,2,1
+76,Other,Thinking and internal life,4,2,1
+77,Other,Religious practices,4,2,1
+78,Other,Looking for a job,4,2,1

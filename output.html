@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Daily Activities</title>
+  <title>Categorization Skimina et al. 2020 </title>
   <link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
   <style>
     body {
-      background-color: #ffffff; /* Set your desired background color #f0f0f0 */
+      background-color: #fffff; /* Set your desired background color */
       margin: 0;
       display: flex;
       flex-direction: column;
@@ -52,14 +52,14 @@
   </style>
 </head>
 <body>
-  <h1>Categorization Stadel et al. (2024)</h1>
+  <h1>Categorization Skimina et al. 2020</h1>
 
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
   <script>
     var margin = { top: 10, right: 10, bottom: 10, left: 10 },
-      width = 1050 - margin.left - margin.right,
-      height = 3000 - margin.top - margin.bottom;
+      width = 1150 - margin.left - margin.right,
+      height = 2650 - margin.top - margin.bottom;
 
     var formatNumber = d3.format(",.0f"),
       format = function (d) { return formatNumber(d); },
@@ -76,11 +76,12 @@
 
     var sankey = d3.sankey()
       .nodeWidth(20)
-      .nodePadding(10)  /* Thickness lines */
-      .size([width, height]);
+      .nodePadding(8)  /* Thickness lines */
+      .size([width, height])
+      .nodeSort(null);
       
     /* BRING DATA IN RIGHT FORMAT: "https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/TestFormatVis2.csv" */
-    d3.csv("https://raw.githubusercontent.com/AnnaLangener/QualitativeVis/main/StadelLangener_new.csv").then(function (data) {
+    d3.csv("Skimina_new_manual.csv").then(function (data) {
       var sankeydata = { "nodes": [], "links": [] };
 
       data.forEach(function (d) {
