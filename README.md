@@ -379,7 +379,7 @@ visualization.
 ``` r
 df <- Source_Target
 
-write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/Skimina_new2.csv")
+write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/Skimina_new.csv")
 
 #write.csv(Source_Target,"/Users/annalangener/projects/QualitativeVis/StadelLangener_new.csv")
 
@@ -432,36 +432,6 @@ var sankey = d3.sankey()
   .nodePadding(8)  # Thickness of lines
   .size([width, height])
   .nodeSort(null); # Remove this if you don't want the fixed order
-```
-
-### OPTIONAL: Adapting the HTML file in R
-
-``` r
-generate_html <- function(html_file_path, data) {
-
-  html_template <- readLines(html_file_path, warn = FALSE)
-  modified_html <- gsub("TestFormatVis_new.csv", data, html_template)
-  modified_html <- gsub("width = 1150", width, html_template)
-  modified_html <- gsub("height = 2650", height, html_template)
-  modified_html <- gsub(".nodeWidth(20)", node_width, html_template)
-  modified_html <- gsub(".nodePadding(8)", node_padding, html_template)
-  
-  output_file <- "output.html"
-  writeLines(modified_html, output_file)
-  
-  return(output_file)
-}
-
-# Example usage
-html_file_path <- "output.html"
-data <- "Skimina_new.csv" # add here your new data
-width <- "width = 1150" # change the width here
-height <- "height = 1150" # change the width here
-node_width <- ".nodeWidth(20)" # change the width here
-node_padding <- "height = 1150" # change the width here
-
-
-output_file <- generate_html(html_file_path, data)
 ```
 
 ### Questions?

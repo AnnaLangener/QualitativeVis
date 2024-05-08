@@ -1,0 +1,193 @@
+source,target
+Food,cooking/ preparing a meal
+cooking/ preparing a meal,making/ having a tea/ coffee
+Food,baking
+Food,ordering food
+Food,going out for fast food restaurant
+Food,going to a restaurant
+Food,going to a cafe
+Food,snacking
+Food,eating a meal
+Personal grooming,getting ready
+getting ready for bed,showering
+getting ready,showering
+getting ready,washing/ drying hair
+getting ready,putting on/ changing clothes
+getting ready,brushed my teeth
+getting ready,washed my face
+getting ready,putting on a face mask
+getting ready,doing make up
+getting ready,painting nails
+getting ready,dying hair
+Personal grooming,getting ready for bed
+getting ready for bed,washing/ drying hair
+getting ready for bed,putting on/ changing clothes
+getting ready for bed,brushed my teeth
+getting ready for bed,washed my face
+Personal grooming,getting a piercing
+Personal grooming,getting a massage
+Personal grooming,going to hairdresser
+Personal grooming,going to beauty salon
+Personal grooming,going to nail salon
+Resting,taking a nap
+Resting,taking a break
+Resting,relaxing/ chilling/ resting
+Resting,laying/ sitting somewhere
+Resting,nothing
+Hobby,playing videogames
+Hobby,playing games
+playing games,sudoku
+playing games,jigsaw puzzles
+playing games,playing pool
+playing games,lasergaming
+Hobby,pet activities
+Hobby,watering plant
+Hobby,repotting plant
+Hobby,working on a creative task
+working on a creative task,looking at old picture/ photos/videos
+working on a creative task,crafting a photo wall
+working on a creative task,assembling a miniature
+working on a creative task,painting
+working on a creative task,drawing
+working on a creative task,making a bracelet
+working on a creative task,crochet
+working on a creative task,knitting
+working on a creative task,reading
+working on a creative task,writing poem for Sinterklaas
+working on a creative task,singing
+working on a creative task,playing an instrument
+working on a creative task,acting / practicing (theatre / comedy)
+working on a creative task,photo/ video shooting
+working on a creative task,journaling
+City,going to the city
+going to the city,going to the theatre
+going to the city,going to the forum
+going to the city,watching movie in the cinema
+Nature,going outside
+going outside,being at a lake
+going outside,going to the ocean
+going outside,being at a park
+going outside,visiting a botanical garden
+going outside,being in a forest
+University,studying
+University,going/ being at university/ faculty/library
+University,working on a university assignment
+University,receiving test results/ grades
+going/ being at university/ faculty/library,student association/ committee meeting
+going/ being at university/ faculty/library,having an uni-related meeting
+having an uni-related meeting,taking an exam
+having an uni-related meeting,attending a lecture
+having an uni-related meeting,attending a practical
+Work,charity work/ Volunteering
+Work,going to/ being at work/ the office
+going to/ being at work/ the office,work-related meeting
+Work,work-related meeting
+work-related meeting,assisting in an operation/ surgery
+work-related meeting,patient consultation
+work-related meeting,had my job interview
+Work,participating in research
+Work,babysitting
+Work,teaching language classes
+Work,tutoring
+Work,giving riding lessons
+Work,teaching a sports class
+Sporting,teaching a sports class
+Sporting,going to the gym
+Sporting,doing a workout
+doing a workout,yoga
+doing a workout,pilates
+doing a workout,stretching
+doing a workout,archery
+doing a workout,playing basketball
+doing a workout,playing football
+doing a workout,playing table tennis
+doing a workout,playing tennis
+doing a workout,dancing
+doing a workout,swimming
+doing a workout,going for a run
+doing a workout,inline skating
+doing a workout,kickboxing
+doing a workout,MMA
+doing a workout,ice skating
+Chores,small errands
+small errands,picking up/ bringing away mail
+Chores,handywork/ renovation
+Chores,tidying up
+Chores,cleaning
+Chores,doing groceries
+Chores,doing laundry
+Chores,packing/ unpacking suitcase
+Chores,planning/ organising
+Social,hanging out/ being/ meeting with someone
+hanging out/ being/ meeting with someone,talking
+hanging out/ being/ meeting with someone,having a fight
+hanging out/ being/ meeting with someone,being intimate/ cuddling
+hanging out/ being/ meeting with someone,fooling around
+Social,helping/ supporting someone
+helping/ supporting someone,picking someone up/ bringing away
+Social,visiting family/ friends overnight
+Substance use,smoking (not specified)
+Substance use,smoking weed/ taking drugs
+Substance use,having an (alcoholic) drink/ borrel
+Party,playing drinking games
+Party,going out/partying
+Party,going to a concert
+Party,going to a festival
+Party,preparing for a holiday/ event (celebration)
+preparing for a holiday/ event (celebration),christmas celebration
+preparing for a holiday/ event (celebration),other holiday celebration
+preparing for a holiday/ event (celebration),birthday celebration
+Buying,going shopping
+going shopping,going to a hardware store
+going shopping,going to a bookstore
+going shopping,buying gifts
+Buying,online shopping
+online shopping,buying gifts
+going shopping,shopping clothing
+going shopping,buying jewelry
+going shopping,shopping home goods/ furniture
+online shopping,shopping clothing
+online shopping,buying jewelry
+online shopping,shopping home goods/ furniture
+Digital,listening to music/ radio
+Digital,listening to a podcast
+Digital,watching sport (tv)
+Digital,watching videos/ TV shows/ Movies
+Digital,watching/ reading news
+Digital,browsing on the laptop
+browsing on the laptop,social media use
+Digital,browsing on the phone
+browsing on the phone,social media use
+browsing on the laptop,texting/ chatting/checking messages
+browsing on the laptop,emailing
+browsing on the laptop,(video) calling
+browsing on the phone,texting/ chatting/checking messages
+browsing on the phone,emailing
+browsing on the phone,(video) calling
+Religion,religious activities
+religious activities,going to church
+Travel,traveling
+traveling,city trip/ vacation
+traveling,sightseeing
+Transport,traveling
+traveling,taking a flight
+traveling,taking/ waiting for public transportation
+traveling,walking
+traveling,biking/ cycling
+traveling,traveling by car
+traveling,going home
+Health,doctor's appointment
+doctor's appointment,therapy session
+doctor's appointment,physiotherapy
+doctor's appointment,going to the pharmacy
+doctor's appointment,going to the hospital
+doctor's appointment,dentist appointment
+Health,not feeling well
+not feeling well,being sick/injured
+being sick/injured,having a headache
+being sick/injured,taking a covid test
+being sick/injured,being hungover
+not feeling well,crying
+Other,procrastinating
+Other,meditating
+Other,thinking
