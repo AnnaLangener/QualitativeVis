@@ -48,10 +48,6 @@ head(Overview_Codes)
 ## 6                   Resting     4
 ```
 
-``` r
-#Overview_Codes %>% group_by(Level)  %>% summarize(n())
-```
-
 *File 2*
 
 The second data file contains how the different codes are related to
@@ -411,7 +407,7 @@ in the html file.
 The variables width (here 1150) and height (here 2650) can be changed
 when nodes overlap.
 
-Similarly, nodwWidth (here 20) and nodePadding (here 8) can be changed
+Similarly, nodeWidth (here 20) and nodePadding (here 8) can be changed
 for a nicer visualization. You can also try to delte the nodeSort(null)
 attribute.
 
