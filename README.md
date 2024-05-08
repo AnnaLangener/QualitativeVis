@@ -1,10 +1,3 @@
----
-output: md_document
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Visualization of the Categories/ Codebook
 
 This repository is part of the project “Assessing Daily Life Activities:
