@@ -425,4 +425,4 @@ var sankey = d3.sankey()
 
 ### Questions?
 
-Write an email to a.m.langener[at].rug.nl or langener95[at].gmail.com
+Write an email to a.m.langener[at]rug.nl or langener95[at]gmail.com
