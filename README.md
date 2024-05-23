@@ -8,7 +8,7 @@ Stadel, Anna Langener, Laura Bringmann
 In this repository we provide example code to visualize the categories/
 codebook as a Sankey Diagramm: See
 <https://annalangener.github.io/QualitativeVis/> or
-<https://annalangener.github.io/QualitativeVis/Skiminia.html>.
+<https://annalangener.github.io/QualitativeVis/Skimina.html>.
 
 <img src="Example_Picture.png" width="567"/>
 
