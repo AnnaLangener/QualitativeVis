@@ -1,193 +1,184 @@
-,source,target,level_source,level_target,value
-1,Food,cooking/ preparing a meal,4,3,1
-2,cooking/ preparing a meal,making/ having a tea/ coffee,3,1,1
-3,Food,baking,4,1,1
-4,Food,ordering food,4,1,1
-5,Food,going out for fast food restaurant,4,1,1
-6,Food,going to a restaurant,4,1,1
-7,Food,going to a cafe,4,1,1
-8,Food,snacking,4,1,1
-9,Food,eating a meal,4,1,1
-10,Personal grooming,getting ready,4,3,9
-21,getting ready for bed,showering,3,1,1
-11,getting ready,showering,3,1,1
-12,getting ready,washing/ drying hair,3,1,1
-13,getting ready,putting on/ changing clothes,3,1,1
-14,getting ready,brushed my teeth,3,1,1
-15,getting ready,washed my face,3,1,1
-16,getting ready,putting on a face mask,3,1,1
-17,getting ready,doing make up,3,1,1
-18,getting ready,painting nails,3,1,1
-19,getting ready,dying hair,3,1,1
-20,Personal grooming,getting ready for bed,4,3,5
-22,getting ready for bed,washing/ drying hair,3,1,1
-23,getting ready for bed,putting on/ changing clothes,3,1,1
-24,getting ready for bed,brushed my teeth,3,1,1
-25,getting ready for bed,washed my face,3,1,1
-26,Personal grooming,getting a piercing,4,1,1
-27,Personal grooming,getting a massage,4,1,1
-28,Personal grooming,going to hairdresser,4,1,1
-29,Personal grooming,going to beauty salon,4,1,1
-30,Personal grooming,going to nail salon,4,1,1
-31,Resting,taking a nap,4,1,1
-32,Resting,taking a break,4,1,1
-33,Resting,relaxing/ chilling/ resting,4,1,1
-34,Resting,laying/ sitting somewhere,4,1,1
-35,Resting,nothing,4,1,1
-36,Hobby,playing videogames,4,2,1
-37,Hobby,playing games,4,2,4
-38,playing games,sudoku,2,1,1
-39,playing games,jigsaw puzzles,2,1,1
-40,playing games,playing pool,2,1,1
-41,playing games,lasergaming,2,1,1
-42,Hobby,pet activities,4,2,1
-43,Hobby,watering plant,4,1,1
-44,Hobby,repotting plant,4,1,1
-45,Hobby,working on a creative task,4,3,15
-46,working on a creative task,looking at old picture/ photos/videos,3,1,1
-47,working on a creative task,crafting a photo wall,3,1,1
-48,working on a creative task,assembling a miniature,3,1,1
-49,working on a creative task,painting,3,1,1
-50,working on a creative task,drawing,3,1,1
-51,working on a creative task,making a bracelet,3,1,1
-52,working on a creative task,crochet,3,1,1
-53,working on a creative task,knitting,3,1,1
-54,working on a creative task,reading,3,1,1
-55,working on a creative task,writing poem for Sinterklaas,3,1,1
-56,working on a creative task,singing,3,2,1
-57,working on a creative task,playing an instrument,3,2,1
-58,working on a creative task,acting / practicing (theatre / comedy),3,2,1
-59,working on a creative task,photo/ video shooting,3,2,1
-60,working on a creative task,journaling,3,2,1
-61,City,going to the city,4,3,3
-62,going to the city,going to the theatre,3,1,1
-63,going to the city,going to the forum,3,1,1
-64,going to the city,watching movie in the cinema,3,1,1
-65,Nature,going outside,4,3,5
-66,going outside,being at a lake,3,1,1
-67,going outside,going to the ocean,3,1,1
-68,going outside,being at a park,3,1,1
-69,going outside,visiting a botanical garden,3,1,1
-70,going outside,being in a forest,3,1,1
-71,University,studying,4,2,1
-72,University,going/ being at university/ faculty/library,4,3,4
-73,University,working on a university assignment,4,1,1
-74,University,receiving test results/ grades,4,1,1
-75,going/ being at university/ faculty/library,student association/ committee meeting,3,2,1
-76,going/ being at university/ faculty/library,having an uni-related meeting,3,2,3
-77,having an uni-related meeting,taking an exam,2,1,1
-78,having an uni-related meeting,attending a lecture,2,1,1
-79,having an uni-related meeting,attending a practical,2,1,1
-80,Work,charity work/ Volunteering,4,3,1
-81,Work,going to/ being at work/ the office,4,3,1.5
-82,going to/ being at work/ the office,work-related meeting,3,2,1.5
-83,Work,work-related meeting,4,2,1.5
-84,work-related meeting,assisting in an operation/ surgery,2,1,1
-85,work-related meeting,patient consultation,2,1,1
-86,work-related meeting,had my job interview,2,1,1
-87,Work,participating in research,4,1,1
-88,Work,babysitting,4,1,1
-89,Work,teaching language classes,4,1,1
-90,Work,tutoring,4,1,1
-91,Work,giving riding lessons,4,1,1
-92,Work,teaching a sports class,4,1,1
-93,Sporting,teaching a sports class,4,1,1
-94,Sporting,going to the gym,4,3,1
-95,Sporting,doing a workout,4,3,15
-96,doing a workout,yoga,3,1,1
-97,doing a workout,pilates,3,1,1
-98,doing a workout,stretching,3,1,1
-99,doing a workout,archery,3,1,1
-100,doing a workout,playing basketball,3,1,1
-101,doing a workout,playing football,3,1,1
-102,doing a workout,playing table tennis,3,1,1
-103,doing a workout,playing tennis,3,1,1
-104,doing a workout,dancing,3,1,1
-105,doing a workout,swimming,3,1,1
-106,doing a workout,going for a run,3,1,1
-107,doing a workout,inline skating,3,1,1
-108,doing a workout,kickboxing,3,1,1
-109,doing a workout,MMA,3,1,1
-110,doing a workout,ice skating,3,1,1
-111,Chores,small errands,4,3,1
-112,small errands,picking up/ bringing away mail,3,2,1
-113,Chores,handywork/ renovation,4,1,1
-114,Chores,tidying up,4,1,1
-115,Chores,cleaning,4,1,1
-116,Chores,doing groceries,4,1,1
-117,Chores,doing laundry,4,1,1
-118,Chores,packing/ unpacking suitcase,4,1,1
-119,Chores,planning/ organising,4,3,1
-120,Social,hanging out/ being/ meeting with someone,4,3,4
-121,hanging out/ being/ meeting with someone,talking,3,1,1
-122,hanging out/ being/ meeting with someone,having a fight,3,1,1
-123,hanging out/ being/ meeting with someone,being intimate/ cuddling,3,1,1
-124,hanging out/ being/ meeting with someone,fooling around,3,1,1
-125,Social,helping/ supporting someone,4,2,1
-126,helping/ supporting someone,picking someone up/ bringing away,2,1,1
-127,Social,visiting family/ friends overnight,4,3,1
-128,Substance use,smoking (not specified),4,1,1
-129,Substance use,smoking weed/ taking drugs,4,1,1
-130,Substance use,having an (alcoholic) drink/ borrel,4,1,1
-131,Party,playing drinking games,4,1,1
-132,Party,going out/partying,4,2,1
-133,Party,going to a concert,4,2,1
-134,Party,going to a festival,4,2,1
-135,Party,preparing for a holiday/ event (celebration),4,3,3
-136,preparing for a holiday/ event (celebration),christmas celebration,3,1,1
-137,preparing for a holiday/ event (celebration),other holiday celebration,3,1,1
-138,preparing for a holiday/ event (celebration),birthday celebration,3,1,1
-139,Buying,going shopping,4,3,6
-140,going shopping,going to a hardware store,3,1,1
-141,going shopping,going to a bookstore,3,1,1
-142,going shopping,buying gifts,3,1,1
-143,Buying,online shopping,4,3,4
-144,online shopping,buying gifts,3,1,1
-145,going shopping,shopping clothing,3,1,1
-146,going shopping,buying jewelry,3,1,1
-147,going shopping,shopping home goods/ furniture,3,1,1
-148,online shopping,shopping clothing,3,1,1
-149,online shopping,buying jewelry,3,1,1
-150,online shopping,shopping home goods/ furniture,3,1,1
-151,Digital,listening to music/ radio,4,1,1
-152,Digital,listening to a podcast,4,1,1
-153,Digital,watching sport (tv),4,1,1
-154,Digital,watching videos/ TV shows/ Movies,4,1,1
-155,Digital,watching/ reading news,4,1,1
-156,Digital,browsing on the laptop,4,3,4
-157,browsing on the laptop,social media use,3,2,1
-158,Digital,browsing on the phone,4,3,4
-159,browsing on the phone,social media use,3,2,1
-160,browsing on the laptop,texting/ chatting/checking messages,3,1,1
-161,browsing on the laptop,emailing,3,1,1
-162,browsing on the laptop,(video) calling,3,1,1
-163,browsing on the phone,texting/ chatting/checking messages,3,1,1
-164,browsing on the phone,emailing,3,1,1
-165,browsing on the phone,(video) calling,3,1,1
-166,Religion,religious activities,4,3,1
-167,religious activities,going to church,3,1,1
-168,Travel,traveling,4,3,4
-169,traveling,city trip/ vacation,3,2,1
-170,traveling,sightseeing,3,2,1
-171,Transport,traveling,4,3,4
-172,traveling,taking a flight,3,1,1
-173,traveling,taking/ waiting for public transportation,3,1,1
-174,traveling,walking,3,1,1
-175,traveling,biking/ cycling,3,1,1
-176,traveling,traveling by car,3,1,1
-177,traveling,going home,3,1,1
-178,Health,doctor's appointment,4,3,5
-179,doctor's appointment,therapy session,3,1,1
-180,doctor's appointment,physiotherapy,3,1,1
-181,doctor's appointment,going to the pharmacy,3,1,1
-182,doctor's appointment,going to the hospital,3,1,1
-183,doctor's appointment,dentist appointment,3,1,1
-184,Health,not feeling well,4,3,4
-185,not feeling well,being sick/injured,3,2,3
-186,being sick/injured,having a headache,2,1,1
-187,being sick/injured,taking a covid test,2,1,1
-188,being sick/injured,being hungover,2,1,1
-189,not feeling well,crying,3,1,1
-190,Other,procrastinating,4,1,1
-191,Other,meditating,4,1,1
-192,Other,thinking,4,1,1
+"","source","target","level_source","level_target","value"
+"1","Food","cooking/ preparing a meal",4,3,1
+"2","cooking/ preparing a meal","making/ having a tea/ coffee",3,1,1
+"3","Food","baking",4,1,1
+"4","Food","ordering food",4,1,1
+"5","Food","going out for fast food restaurant",4,1,1
+"6","Food","going to a restaurant",4,1,1
+"7","Food","going to a cafe",4,1,1
+"8","Food","snacking",4,1,1
+"9","Food","eating a meal",4,1,1
+"10","Personal grooming","getting ready",4,3,9
+"11","getting ready for bed","showering",3,1,1
+"12","getting ready","showering",3,1,1
+"13","getting ready","washing/ drying hair",3,1,1
+"14","getting ready","putting on/ changing clothes",3,1,1
+"15","getting ready","brushed my teeth",3,1,1
+"16","getting ready","washed my face",3,1,1
+"17","getting ready","putting on a face mask",3,1,1
+"18","getting ready","doing make up",3,1,1
+"19","getting ready","painting nails",3,1,1
+"20","getting ready","dying hair",3,1,1
+"21","Personal grooming","getting ready for bed",4,3,5
+"22","getting ready for bed","washing/ drying hair",3,1,1
+"23","getting ready for bed","putting on/ changing clothes",3,1,1
+"24","getting ready for bed","brushed my teeth",3,1,1
+"25","getting ready for bed","washed my face",3,1,1
+"26","Personal grooming","getting a piercing",4,1,1
+"27","Personal grooming","getting a massage",4,1,1
+"28","Personal grooming","going to hairdresser",4,1,1
+"31","Resting","taking a nap",4,1,1
+"32","Resting","taking a break",4,1,1
+"33","Resting","relaxing/ chilling/ resting",4,1,1
+"34","Resting","laying/ sitting somewhere",4,1,1
+"35","Resting","nothing",4,1,1
+"36","Hobby","playing videogames",4,2,1
+"37","Hobby","playing games",4,2,4
+"38","playing games","sudoku",2,1,1
+"39","playing games","jigsaw puzzles",2,1,1
+"40","playing games","playing pool",2,1,1
+"41","playing games","lasergaming",2,1,1
+"42","Hobby","pet activities",4,2,1
+"43","Hobby","watering plant",4,1,1
+"44","Hobby","repotting plant",4,1,1
+"45","Hobby","working on a creative task",4,3,15
+"46","working on a creative task","looking at old picture/ photos/videos",3,1,1
+"47","working on a creative task","crafting a photo wall",3,1,1
+"48","working on a creative task","assembling a miniature",3,1,1
+"49","working on a creative task","painting",3,1,1
+"50","working on a creative task","drawing",3,1,1
+"51","working on a creative task","making a bracelet",3,1,1
+"52","working on a creative task","crochet",3,1,1
+"53","working on a creative task","knitting",3,1,1
+"54","working on a creative task","reading",3,1,1
+"55","working on a creative task","writing poem for Sinterklaas",3,1,1
+"56","working on a creative task","singing",3,2,1
+"57","working on a creative task","playing an instrument",3,2,1
+"58","working on a creative task","acting / practicing (theatre / comedy)",3,2,1
+"59","working on a creative task","photo/ video shooting",3,2,1
+"60","working on a creative task","journaling",3,2,1
+"61","City","going to the city",4,3,3
+"62","going to the city","going to the theatre",3,1,1
+"63","going to the city","going to the forum",3,1,1
+"64","going to the city","watching movie in the cinema",3,1,1
+"65","Nature","going outside",4,3,5
+"66","going outside","being at a lake",3,1,1
+"67","going outside","going to the ocean",3,1,1
+"68","going outside","being at a park",3,1,1
+"69","going outside","visiting a botanical garden",3,1,1
+"70","going outside","being in a forest",3,1,1
+"71","University","studying",4,2,1
+"72","University","going/ being at university/ faculty/library",4,3,4
+"73","University","working on a university assignment",4,1,1
+"74","University","receiving test results/ grades",4,1,1
+"75","going/ being at university/ faculty/library","student association/ committee meeting",3,2,1
+"76","going/ being at university/ faculty/library","having an uni-related meeting",3,2,3
+"77","having an uni-related meeting","taking an exam",2,1,1
+"78","having an uni-related meeting","attending a lecture",2,1,1
+"79","having an uni-related meeting","attending a practical",2,1,1
+"80","Work","charity work/ Volunteering",4,3,1
+"81","Work","going to/ being at work/ the office",4,3,1.5
+"82","going to/ being at work/ the office","work-related meeting",3,2,1.5
+"83","Work","work-related meeting",4,2,1.5
+"84","work-related meeting","assisting in an operation/ surgery",2,1,1
+"85","work-related meeting","patient consultation",2,1,1
+"86","work-related meeting","had my job interview",2,1,1
+"87","Work","participating in research",4,1,1
+"88","Work","babysitting",4,1,1
+"89","Work","teaching language classes",4,1,1
+"90","Work","tutoring",4,1,1
+"91","Work","giving riding lessons",4,1,1
+"92","Work","teaching a sports class",4,1,1
+"93","Sporting","teaching a sports class",4,1,1
+"94","Sporting","going to the gym",4,3,1
+"95","Sporting","doing a workout",4,3,15
+"96","doing a workout","yoga",3,1,1
+"97","doing a workout","pilates",3,1,1
+"98","doing a workout","stretching",3,1,1
+"99","doing a workout","archery",3,1,1
+"100","doing a workout","playing basketball",3,1,1
+"101","doing a workout","playing football",3,1,1
+"102","doing a workout","playing table tennis",3,1,1
+"103","doing a workout","playing tennis",3,1,1
+"104","doing a workout","dancing",3,1,1
+"105","doing a workout","swimming",3,1,1
+"106","doing a workout","going for a run",3,1,1
+"107","doing a workout","inline skating",3,1,1
+"108","doing a workout","kickboxing",3,1,1
+"110","doing a workout","ice skating",3,1,1
+"111","Chores","small errands",4,3,1
+"112","small errands","picking up/ bringing away mail",3,2,1
+"114","Chores","tidying up",4,1,1
+"115","Chores","cleaning",4,1,1
+"116","Chores","doing groceries",4,1,1
+"117","Chores","doing laundry",4,1,1
+"118","Chores","packing/ unpacking suitcase",4,1,1
+"119","Chores","planning/ organising",4,3,1
+"120","Social","hanging out/ being/ meeting with someone",4,3,4
+"121","hanging out/ being/ meeting with someone","talking",3,1,1
+"122","hanging out/ being/ meeting with someone","having a fight",3,1,1
+"123","hanging out/ being/ meeting with someone","being intimate/ cuddling",3,1,1
+"124","hanging out/ being/ meeting with someone","fooling around",3,1,1
+"125","Social","helping/ supporting someone",4,2,1
+"126","helping/ supporting someone","picking someone up/ bringing away",2,1,1
+"127","Social","visiting family/ friends overnight",4,3,1
+"128","Substance use","smoking (not specified)",4,1,1
+"129","Substance use","smoking weed/ taking drugs",4,1,1
+"130","Substance use","having an (alcoholic) drink/ borrel",4,1,1
+"132","Party","going out/partying",4,2,1
+"133","Party","going to a concert",4,2,1
+"134","Party","going to a festival",4,2,1
+"135","Party","preparing for a holiday/ event (celebration)",4,3,3
+"138","preparing for a holiday/ event (celebration)","birthday celebration",3,1,1
+"139","Buying","going shopping",4,3,6
+"140","going shopping","going to a hardware store",3,1,1
+"141","going shopping","going to a bookstore",3,1,1
+"142","going shopping","buying gifts",3,1,1
+"143","Buying","online shopping",4,3,4
+"144","online shopping","buying gifts",3,1,1
+"145","going shopping","shopping clothing",3,1,1
+"146","going shopping","buying jewelry",3,1,1
+"147","going shopping","shopping home goods/ furniture",3,1,1
+"148","online shopping","shopping clothing",3,1,1
+"149","online shopping","buying jewelry",3,1,1
+"150","online shopping","shopping home goods/ furniture",3,1,1
+"151","Digital","listening to music/ radio",4,1,1
+"152","Digital","listening to a podcast",4,1,1
+"153","Digital","watching sport (tv)",4,1,1
+"154","Digital","watching videos/ TV shows/ Movies",4,1,1
+"155","Digital","watching/ reading news",4,1,1
+"156","Digital","browsing on the laptop",4,3,4
+"157","browsing on the laptop","social media use",3,2,1
+"158","Digital","browsing on the phone",4,3,4
+"159","browsing on the phone","social media use",3,2,1
+"160","browsing on the laptop","texting/ chatting/checking messages",3,1,1
+"161","browsing on the laptop","emailing",3,1,1
+"162","browsing on the laptop","(video) calling",3,1,1
+"163","browsing on the phone","texting/ chatting/checking messages",3,1,1
+"164","browsing on the phone","emailing",3,1,1
+"165","browsing on the phone","(video) calling",3,1,1
+"166","Religion","religious activities",4,3,1
+"167","religious activities","going to church",3,1,1
+"168","Travel","traveling",4,3,4
+"169","traveling","city trip/ vacation",3,2,1
+"170","traveling","sightseeing",3,2,1
+"171","Transport","traveling",4,3,4
+"172","traveling","taking a flight",3,1,1
+"173","traveling","taking/ waiting for public transportation",3,1,1
+"174","traveling","walking",3,1,1
+"175","traveling","biking/ cycling",3,1,1
+"176","traveling","traveling by car",3,1,1
+"177","traveling","going home",3,1,1
+"178","Health","doctor's appointment",4,3,5
+"179","doctor's appointment","therapy session",3,1,1
+"181","doctor's appointment","going to the pharmacy",3,1,1
+"183","doctor's appointment","dentist appointment",3,1,1
+"184","Health","not feeling well",4,3,4
+"185","not feeling well","being sick/injured",3,2,3
+"186","being sick/injured","having a headache",2,1,1
+"187","being sick/injured","taking a covid test",2,1,1
+"188","being sick/injured","being hungover",2,1,1
+"189","not feeling well","crying",3,1,1
+"190","Other","procrastinating",4,1,1
+"191","Other","meditating",4,1,1
+"192","Other","thinking",4,1,1
